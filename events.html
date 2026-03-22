@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Event Travel Planner — Plan trips around concerts, festivals, and sports events.">
+  <title>Event Planner — AITravel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Travio</a>
+    <div class="nav-links" id="navLinks">
+      <a href="planner.html">Trip Planner</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="booking.html">Booking</a>
+      <a href="safety.html">Safety</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="planner.html" class="btn btn-primary btn-sm">Start Planning</a>
+    </div>
+    <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="layout-dashboard">
+    <aside class="sidebar">
+      <div style="margin-bottom: 24px; padding: 0 16px;">
+        <p class="label" style="margin-bottom: 8px;">Current Trip</p>
+        <h4>Tokyo, Japan</h4>
+        <p style="font-size: 0.8125rem;">Mar 25 – Mar 30, 2026</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link"><span class="icon">📊</span> Overview</a>
+        <a href="planner.html" class="sidebar-link"><span class="icon">🗺️</span> Trip Planner</a>
+        <a href="events.html" class="sidebar-link active"><span class="icon">🎫</span> Events</a>
+        <a href="booking.html" class="sidebar-link"><span class="icon">✈️</span> Bookings</a>
+        <a href="budget.html" class="sidebar-link"><span class="icon">💰</span> Budget</a>
+        <a href="safety.html" class="sidebar-link"><span class="icon">🛡️</span> Safety</a>
+        <a href="rewards.html" class="sidebar-link"><span class="icon">🏆</span> Rewards</a>
+        <a href="summary.html" class="sidebar-link"><span class="icon">📋</span> Summary</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h1>🎫 Event Planner</h1>
+        <p>Plan your trip around events, festivals, and matches</p>
+      </div>
+
+      <!-- Event Selector -->
+      <div class="card" style="margin-bottom: 32px; padding: 32px;">
+        <div class="grid-2" style="margin-bottom: 24px;">
+          <div class="input-group">
+            <label>Event Category</label>
+            <select class="input-field" style="appearance: auto; cursor: pointer;">
+              <option>All Events</option>
+              <option>Music & Concerts</option>
+              <option selected>Sports</option>
+              <option>Festivals</option>
+              <option>Conferences</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Location</label>
+            <input type="text" class="input-field" placeholder="Tokyo, Japan" value="Tokyo, Japan">
+          </div>
+        </div>
+        <h3 style="margin-bottom: 16px;">Select Events</h3>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+          <div class="checkbox-card selected" onclick="this.classList.toggle('selected')">
+            <input type="checkbox" checked>
+            <div class="checkbox-indicator"></div>
+            <div style="flex: 1;">
+              <div class="flex-between" style="margin-bottom: 4px;">
+                <h4 style="font-size: 0.9375rem;">🏟️ Tokyo Dome Baseball</h4>
+                <span class="badge badge-primary">Sports</span>
+              </div>
+              <p style="font-size: 0.8125rem;">Mar 26, 2026 • 6:00 PM • Tokyo Dome</p>
+            </div>
+          </div>
+          <div class="checkbox-card selected" onclick="this.classList.toggle('selected')">
+            <input type="checkbox" checked>
+            <div class="checkbox-indicator"></div>
+            <div style="flex: 1;">
+              <div class="flex-between" style="margin-bottom: 4px;">
+                <h4 style="font-size: 0.9375rem;">🌸 Cherry Blossom Festival</h4>
+                <span class="badge badge-warning">Festival</span>
+              </div>
+              <p style="font-size: 0.8125rem;">Mar 27, 2026 • All Day • Ueno Park</p>
+            </div>
+          </div>
+          <div class="checkbox-card" onclick="this.classList.toggle('selected')">
+            <input type="checkbox">
+            <div class="checkbox-indicator"></div>
+            <div style="flex: 1;">
+              <div class="flex-between" style="margin-bottom: 4px;">
+                <h4 style="font-size: 0.9375rem;">🎵 J-Pop Concert</h4>
+                <span class="badge" style="background: rgba(154,124,255,0.1); color: #7C3AED;">Music</span>
+              </div>
+              <p style="font-size: 0.8125rem;">Mar 28, 2026 • 7:30 PM • Budokan</p>
+            </div>
+          </div>
+          <div class="checkbox-card" onclick="this.classList.toggle('selected')">
+            <input type="checkbox">
+            <div class="checkbox-indicator"></div>
+            <div style="flex: 1;">
+              <div class="flex-between" style="margin-bottom: 4px;">
+                <h4 style="font-size: 0.9375rem;">⚽ J-League Match</h4>
+                <span class="badge badge-primary">Sports</span>
+              </div>
+              <p style="font-size: 0.8125rem;">Mar 29, 2026 • 3:00 PM • National Stadium</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary">✨ Generate Event Schedule</button>
+      </div>
+
+      <!-- Timeline View -->
+      <h2 style="font-size: 1.375rem; margin-bottom: 24px;">📅 Event Timeline</h2>
+      <div class="timeline" style="margin-bottom: 40px;">
+        <div class="timeline-item">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content">
+            <div class="flex-between" style="margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+              <div>
+                <p class="label" style="margin-bottom: 4px;">Mar 26 • 6:00 PM</p>
+                <h3 style="font-size: 1.125rem;">🏟️ Tokyo Dome Baseball</h3>
+              </div>
+              <span class="badge badge-success">Confirmed</span>
+            </div>
+            <p style="font-size: 0.875rem;">Giants vs Tigers • Gate opens 4:30 PM</p>
+            <div style="margin-top: 12px; padding: 12px 16px; background: var(--bg); border-radius: var(--radius-sm);">
+              <p style="font-size: 0.8125rem; font-weight: 600; color: var(--text);">💡 AI Suggestion: Arrive early to explore Tokyo Dome City</p>
+              <p style="font-size: 0.8125rem;">Amusement rides, shops, and restaurants nearby • 2hr before event</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content">
+            <div class="flex-between" style="margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+              <div>
+                <p class="label" style="margin-bottom: 4px;">Mar 27 • All Day</p>
+                <h3 style="font-size: 1.125rem;">🌸 Cherry Blossom Festival</h3>
+              </div>
+              <span class="badge badge-success">Confirmed</span>
+            </div>
+            <p style="font-size: 0.875rem;">Ueno Park • Best viewing spots reserved</p>
+            <div style="margin-top: 12px; padding: 12px 16px; background: var(--bg); border-radius: var(--radius-sm);">
+              <p style="font-size: 0.8125rem; font-weight: 600; color: var(--text);">💡 AI Suggestion: Morning visit + Ameyoko Market</p>
+              <p style="font-size: 0.8125rem;">Visit park 8-11 AM, then explore the famous market street</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content" style="opacity: 0.6;">
+            <div class="flex-between" style="margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+              <div>
+                <p class="label" style="margin-bottom: 4px;">Mar 28 • Free Day</p>
+                <h3 style="font-size: 1.125rem;">🗾 Free Time</h3>
+              </div>
+              <span class="badge" style="background: var(--bg); color: var(--text-light);">Open</span>
+            </div>
+            <p style="font-size: 0.875rem;">No events scheduled</p>
+            <div style="margin-top: 12px; padding: 12px 16px; background: var(--bg); border-radius: var(--radius-sm);">
+              <p style="font-size: 0.8125rem; font-weight: 600; color: var(--text);">💡 Suggested: Visit Akihabara & Harajuku</p>
+              <p style="font-size: 0.8125rem;">Electric Town in morning, Takeshita Street afternoon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nearby Places -->
+      <h2 style="font-size: 1.375rem; margin-bottom: 20px;">📍 Nearby Places</h2>
+      <div class="grid-3">
+        <div class="card card-compact">
+          <div style="font-size: 1.5rem; margin-bottom: 12px;">🍜</div>
+          <h4 style="font-size: 0.9375rem; margin-bottom: 4px;">Ramen Street</h4>
+          <p style="font-size: 0.8125rem;">0.5 km from Tokyo Dome</p>
+          <div class="badge badge-success" style="margin-top: 8px;">Near Event</div>
+        </div>
+        <div class="card card-compact">
+          <div style="font-size: 1.5rem; margin-bottom: 12px;">🛍️</div>
+          <h4 style="font-size: 0.9375rem; margin-bottom: 4px;">LaQua Shopping</h4>
+          <p style="font-size: 0.8125rem;">0.2 km from Tokyo Dome</p>
+          <div class="badge badge-success" style="margin-top: 8px;">Near Event</div>
+        </div>
+        <div class="card card-compact">
+          <div style="font-size: 1.5rem; margin-bottom: 12px;">♨️</div>
+          <h4 style="font-size: 0.9375rem; margin-bottom: 4px;">Spa LaQua</h4>
+          <p style="font-size: 0.8125rem;">0.3 km from Tokyo Dome</p>
+          <div class="badge badge-primary" style="margin-top: 8px;">Relaxation</div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

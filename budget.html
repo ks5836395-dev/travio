@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Budget & Itinerary — Track expenses and view your day-wise travel plan.">
+  <title>Budget & Itinerary — AITravel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Travio</a>
+    <div class="nav-links" id="navLinks">
+      <a href="planner.html">Trip Planner</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="booking.html">Booking</a>
+      <a href="safety.html">Safety</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="planner.html" class="btn btn-primary btn-sm">Start Planning</a>
+    </div>
+    <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="layout-dashboard">
+    <aside class="sidebar">
+      <div style="margin-bottom: 24px; padding: 0 16px;">
+        <p class="label" style="margin-bottom: 8px;">Current Trip</p>
+        <h4>Tokyo, Japan</h4>
+        <p style="font-size: 0.8125rem;">Mar 25 – Mar 30, 2026</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link"><span class="icon">📊</span> Overview</a>
+        <a href="planner.html" class="sidebar-link"><span class="icon">🗺️</span> Trip Planner</a>
+        <a href="events.html" class="sidebar-link"><span class="icon">🎫</span> Events</a>
+        <a href="booking.html" class="sidebar-link"><span class="icon">✈️</span> Bookings</a>
+        <a href="budget.html" class="sidebar-link active"><span class="icon">💰</span> Budget</a>
+        <a href="safety.html" class="sidebar-link"><span class="icon">🛡️</span> Safety</a>
+        <a href="rewards.html" class="sidebar-link"><span class="icon">🏆</span> Rewards</a>
+        <a href="summary.html" class="sidebar-link"><span class="icon">📋</span> Summary</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header flex-between" style="flex-wrap: wrap; gap: 16px;">
+        <div><h1>💰 Budget & Itinerary</h1><p>Track your expenses and view your day-wise plan</p></div>
+        <div class="badge badge-success" style="font-size: 0.875rem; padding: 8px 16px;">₹15,500 remaining</div>
+      </div>
+
+      <!-- Budget Overview -->
+      <div class="card" style="margin-bottom: 32px; padding: 32px; background: linear-gradient(135deg, rgba(111,140,255,0.06), rgba(154,124,255,0.06));">
+        <div class="flex-between" style="margin-bottom: 20px; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <p class="label" style="margin-bottom: 4px;">Total Budget</p>
+            <h2 style="font-size: 2rem;">₹85,000</h2>
+          </div>
+          <div style="text-align: right;">
+            <p class="label" style="margin-bottom: 4px;">Spent</p>
+            <h2 style="font-size: 2rem; color: var(--primary);">₹69,500</h2>
+          </div>
+        </div>
+        <div style="margin-bottom: 8px;" class="flex-between">
+          <span class="caption">Budget Usage</span><span class="caption" style="font-weight: 600;">82%</span>
+        </div>
+        <div class="progress-bar" style="height: 12px;"><div class="progress-fill" style="width: 82%;"></div></div>
+      </div>
+
+      <!-- Expense Breakdown -->
+      <h2 style="font-size: 1.375rem; margin-bottom: 20px;">📊 Expense Breakdown</h2>
+      <div class="grid-3" style="margin-bottom: 40px;">
+        <div class="card card-compact" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 8px;">🏨</div>
+          <p class="caption">Accommodation</p>
+          <h3 style="margin-top: 4px;">₹34,000</h3>
+          <div class="progress-bar" style="margin-top: 12px;"><div class="progress-fill" style="width: 49%; background: linear-gradient(90deg, #667eea, #764ba2);"></div></div>
+          <p class="caption" style="margin-top: 4px;">49% of budget</p>
+        </div>
+        <div class="card card-compact" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 8px;">🍜</div>
+          <p class="caption">Food & Dining</p>
+          <h3 style="margin-top: 4px;">₹15,000</h3>
+          <div class="progress-bar" style="margin-top: 12px;"><div class="progress-fill" style="width: 22%; background: linear-gradient(90deg, #f093fb, #f5576c);"></div></div>
+          <p class="caption" style="margin-top: 4px;">22% of budget</p>
+        </div>
+        <div class="card card-compact" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 8px;">🚆</div>
+          <p class="caption">Transport</p>
+          <h3 style="margin-top: 4px;">₹12,000</h3>
+          <div class="progress-bar" style="margin-top: 12px;"><div class="progress-fill" style="width: 17%; background: linear-gradient(90deg, #4facfe, #00f2fe);"></div></div>
+          <p class="caption" style="margin-top: 4px;">17% of budget</p>
+        </div>
+      </div>
+
+      <!-- Day-wise Itinerary -->
+      <h2 style="font-size: 1.375rem; margin-bottom: 24px;">📅 Day-wise Itinerary</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content">
+            <div class="flex-between" style="margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+              <div><p class="label" style="margin-bottom: 4px;">Day 1 — Mar 25</p><h3 style="font-size: 1.125rem;">Arrival & Shinjuku</h3></div>
+              <span class="badge badge-primary">₹14,500</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: var(--radius-sm);">
+                <span style="font-size: 0.875rem;">09:00</span><span style="color: var(--text-light);">|</span><span style="font-size: 0.875rem;">✈️ Arrive at Narita Airport</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: var(--radius-sm);">
+                <span style="font-size: 0.875rem;">11:30</span><span style="color: var(--text-light);">|</span><span style="font-size: 0.875rem;">🏨 Check-in Shinjuku Grand</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: var(--radius-sm);">
+                <span style="font-size: 0.875rem;">14:00</span><span style="color: var(--text-light);">|</span><span style="font-size: 0.875rem;">🗼 Visit Tokyo Tower</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: var(--radius-sm);">
+                <span style="font-size: 0.875rem;">19:00</span><span style="color: var(--text-light);">|</span><span style="font-size: 0.875rem;">🍜 Dinner at Ichiran Ramen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content">
+            <div class="flex-between" style="margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+              <div><p class="label" style="margin-bottom: 4px;">Day 2 — Mar 26</p><h3 style="font-size: 1.125rem;">Asakusa & Tokyo Dome</h3></div>
+              <span class="badge badge-primary">₹8,200</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: var(--radius-sm);">
+                <span style="font-size: 0.875rem;">08:00</span><span style="color: var(--text-light);">|</span><span style="font-size: 0.875rem;">⛩️ Senso-ji Temple</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: var(--radius-sm);">
+                <span style="font-size: 0.875rem;">12:00</span><span style="color: var(--text-light);">|</span><span style="font-size: 0.875rem;">🍣 Lunch at Tsukiji Market</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: var(--radius-sm);">
+                <span style="font-size: 0.875rem;">18:00</span><span style="color: var(--text-light);">|</span><span style="font-size: 0.875rem;">🏟️ Tokyo Dome Baseball</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="flex-between" style="margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+              <div><p class="label" style="margin-bottom: 4px;">Day 3 — Mar 27</p><h3 style="font-size: 1.125rem;">Cherry Blossom Festival</h3></div>
+              <span class="badge badge-warning">₹6,000</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: var(--radius-sm);">
+                <span style="font-size: 0.875rem;">08:00</span><span style="color: var(--text-light);">|</span><span style="font-size: 0.875rem;">🌸 Ueno Park Blossom Festival</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: var(--radius-sm);">
+                <span style="font-size: 0.875rem;">14:00</span><span style="color: var(--text-light);">|</span><span style="font-size: 0.875rem;">🛍️ Ameyoko Market</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: var(--radius-sm);">
+                <span style="font-size: 0.875rem;">19:00</span><span style="color: var(--text-light);">|</span><span style="font-size: 0.875rem;">🍜 Dinner at Afuri Ramen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

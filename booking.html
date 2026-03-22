@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book flights, trains, and hotels — all in one place.">
+  <title>Booking — AITravel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Travio</a>
+    <div class="nav-links" id="navLinks">
+      <a href="planner.html">Trip Planner</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="booking.html" class="active">Booking</a>
+      <a href="safety.html">Safety</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="planner.html" class="btn btn-primary btn-sm">Start Planning</a>
+    </div>
+    <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="layout-dashboard">
+    <aside class="sidebar">
+      <div style="margin-bottom: 24px; padding: 0 16px;">
+        <p class="label" style="margin-bottom: 8px;">Current Trip</p>
+        <h4>Tokyo, Japan</h4>
+        <p style="font-size: 0.8125rem;">Mar 25 – Mar 30, 2026</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link"><span class="icon">📊</span> Overview</a>
+        <a href="planner.html" class="sidebar-link"><span class="icon">🗺️</span> Trip Planner</a>
+        <a href="events.html" class="sidebar-link"><span class="icon">🎫</span> Events</a>
+        <a href="booking.html" class="sidebar-link active"><span class="icon">✈️</span> Bookings</a>
+        <a href="budget.html" class="sidebar-link"><span class="icon">💰</span> Budget</a>
+        <a href="safety.html" class="sidebar-link"><span class="icon">🛡️</span> Safety</a>
+        <a href="rewards.html" class="sidebar-link"><span class="icon">🏆</span> Rewards</a>
+        <a href="summary.html" class="sidebar-link"><span class="icon">📋</span> Summary</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h1>✈️ Booking</h1>
+        <p>Search and book flights, trains, and hotels</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs" style="margin-bottom: 32px; display: inline-flex;">
+        <div class="tab active" onclick="switchBookingTab(this, 'flights')">✈️ Flights</div>
+        <div class="tab" onclick="switchBookingTab(this, 'trains')">🚆 Trains</div>
+        <div class="tab" onclick="switchBookingTab(this, 'hotels')">🏨 Hotels</div>
+      </div>
+
+      <!-- Search -->
+      <div class="card" style="margin-bottom: 32px; padding: 24px;">
+        <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;">
+          <div class="input-group" style="flex: 1; min-width: 160px;">
+            <label>From</label>
+            <input type="text" class="input-field" placeholder="New Delhi" value="New Delhi">
+          </div>
+          <div class="input-group" style="flex: 1; min-width: 160px;">
+            <label>To</label>
+            <input type="text" class="input-field" placeholder="Tokyo" value="Tokyo">
+          </div>
+          <div class="input-group" style="flex: 1; min-width: 140px;">
+            <label>Date</label>
+            <input type="date" class="input-field" value="2026-03-25">
+          </div>
+          <div class="input-group" style="flex: 1; min-width: 100px;">
+            <label>Passengers</label>
+            <select class="input-field" style="appearance: auto; cursor: pointer;">
+              <option>1</option><option selected>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" style="height: 46px;">Search</button>
+        </div>
+      </div>
+
+      <!-- Results: Flights -->
+      <div id="tab-flights">
+        <div class="flex-between" style="margin-bottom: 20px;">
+          <p style="font-weight: 600; color: var(--text);">6 flights found</p>
+          <select class="input-field" style="width: auto; appearance: auto; cursor: pointer; padding: 8px 12px; font-size: 0.8125rem;">
+            <option>Price: Low to High</option><option>Duration: Shortest</option><option>Rating</option>
+          </select>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="card" style="display: flex; align-items: center; justify-content: space-between; padding: 24px; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+              <div style="width: 48px; height: 48px; border-radius: var(--radius); background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.75rem;">ANA</div>
+              <div>
+                <h4>All Nippon Airways</h4>
+                <p style="font-size: 0.8125rem;">DEL → NRT • Direct • 7h 45m</p>
+                <div class="stars" style="margin-top: 4px; font-size: 0.75rem;">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 32px;">
+              <div style="text-align: center;"><p class="caption">Departure</p><p style="font-weight: 700; font-size: 1.125rem;">06:30</p></div>
+              <div style="text-align: center; color: var(--text-light);">───✈️───</div>
+              <div style="text-align: center;"><p class="caption">Arrival</p><p style="font-weight: 700; font-size: 1.125rem;">18:15</p></div>
+            </div>
+            <div style="text-align: right;">
+              <p style="font-weight: 800; font-size: 1.375rem; color: var(--primary);">₹38,500</p>
+              <p class="caption">per person</p>
+              <button class="btn btn-primary btn-sm" style="margin-top: 8px;">Book Now</button>
+            </div>
+          </div>
+
+          <div class="card" style="display: flex; align-items: center; justify-content: space-between; padding: 24px; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+              <div style="width: 48px; height: 48px; border-radius: var(--radius); background: linear-gradient(135deg, #f093fb, #f5576c); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.75rem;">JAL</div>
+              <div>
+                <h4>Japan Airlines</h4>
+                <p style="font-size: 0.8125rem;">DEL → HND • Direct • 7h 30m</p>
+                <div class="stars" style="margin-top: 4px; font-size: 0.75rem;">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 32px;">
+              <div style="text-align: center;"><p class="caption">Departure</p><p style="font-weight: 700; font-size: 1.125rem;">10:15</p></div>
+              <div style="text-align: center; color: var(--text-light);">───✈️───</div>
+              <div style="text-align: center;"><p class="caption">Arrival</p><p style="font-weight: 700; font-size: 1.125rem;">21:45</p></div>
+            </div>
+            <div style="text-align: right;">
+              <p style="font-weight: 800; font-size: 1.375rem; color: var(--primary);">₹42,200</p>
+              <p class="caption">per person</p>
+              <button class="btn btn-primary btn-sm" style="margin-top: 8px;">Book Now</button>
+            </div>
+          </div>
+
+          <div class="card" style="display: flex; align-items: center; justify-content: space-between; padding: 24px; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+              <div style="width: 48px; height: 48px; border-radius: var(--radius); background: linear-gradient(135deg, #4facfe, #00f2fe); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.75rem;">AI</div>
+              <div>
+                <h4>Air India</h4>
+                <p style="font-size: 0.8125rem;">DEL → NRT • 1 Stop • 11h 20m</p>
+                <div class="stars" style="margin-top: 4px; font-size: 0.75rem;">⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 32px;">
+              <div style="text-align: center;"><p class="caption">Departure</p><p style="font-weight: 700; font-size: 1.125rem;">14:00</p></div>
+              <div style="text-align: center; color: var(--text-light);">──🔄──✈️──</div>
+              <div style="text-align: center;"><p class="caption">Arrival</p><p style="font-weight: 700; font-size: 1.125rem;">05:20+1</p></div>
+            </div>
+            <div style="text-align: right;">
+              <p style="font-weight: 800; font-size: 1.375rem; color: var(--primary);">₹28,900</p>
+              <p class="caption">per person</p>
+              <button class="btn btn-primary btn-sm" style="margin-top: 8px;">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results: Trains (hidden) -->
+      <div id="tab-trains" style="display: none;">
+        <div class="flex-between" style="margin-bottom: 20px;">
+          <p style="font-weight: 600; color: var(--text);">3 routes found</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="card" style="display: flex; align-items: center; justify-content: space-between; padding: 24px; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+              <div style="width: 48px; height: 48px; border-radius: var(--radius); background: linear-gradient(135deg, #34D399, #059669); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.25rem;">🚄</div>
+              <div><h4>Shinkansen Nozomi</h4><p style="font-size: 0.8125rem;">Tokyo → Kyoto • 2h 15m</p></div>
+            </div>
+            <div style="text-align: right;">
+              <p style="font-weight: 800; font-size: 1.375rem; color: var(--primary);">₹11,200</p>
+              <button class="btn btn-primary btn-sm" style="margin-top: 8px;">Book</button>
+            </div>
+          </div>
+          <div class="card" style="display: flex; align-items: center; justify-content: space-between; padding: 24px; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+              <div style="width: 48px; height: 48px; border-radius: var(--radius); background: linear-gradient(135deg, #60A5FA, #3B82F6); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.25rem;">🚄</div>
+              <div><h4>Shinkansen Hikari</h4><p style="font-size: 0.8125rem;">Tokyo → Osaka • 2h 50m</p></div>
+            </div>
+            <div style="text-align: right;">
+              <p style="font-weight: 800; font-size: 1.375rem; color: var(--primary);">₹9,800</p>
+              <button class="btn btn-primary btn-sm" style="margin-top: 8px;">Book</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results: Hotels (hidden) -->
+      <div id="tab-hotels" style="display: none;">
+        <div class="flex-between" style="margin-bottom: 20px;">
+          <p style="font-weight: 600; color: var(--text);">5 hotels found</p>
+        </div>
+        <div class="grid-2">
+          <div class="card" style="padding: 0; overflow: hidden;">
+            <div style="height: 180px; background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+            <div style="padding: 24px;">
+              <div class="flex-between" style="margin-bottom: 8px;"><h3>Shinjuku Grand</h3><div class="stars" style="font-size: 0.75rem;">⭐⭐⭐⭐⭐</div></div>
+              <p style="font-size: 0.875rem; margin-bottom: 16px;">Shinjuku, Tokyo • 4.8★ • Free WiFi, Pool</p>
+              <div class="flex-between"><span style="font-weight: 800; font-size: 1.25rem; color: var(--primary);">₹8,500<span style="font-weight: 400; font-size: 0.8125rem; color: var(--text-light);">/night</span></span><button class="btn btn-primary btn-sm">Book</button></div>
+            </div>
+          </div>
+          <div class="card" style="padding: 0; overflow: hidden;">
+            <div style="height: 180px; background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
+            <div style="padding: 24px;">
+              <div class="flex-between" style="margin-bottom: 8px;"><h3>Park Hyatt Tokyo</h3><div class="stars" style="font-size: 0.75rem;">⭐⭐⭐⭐⭐</div></div>
+              <p style="font-size: 0.875rem; margin-bottom: 16px;">Shinjuku, Tokyo • 4.9★ • Spa, Gym, Bar</p>
+              <div class="flex-between"><span style="font-weight: 800; font-size: 1.25rem; color: var(--primary);">₹25,000<span style="font-weight: 400; font-size: 0.8125rem; color: var(--text-light);">/night</span></span><button class="btn btn-primary btn-sm">Book</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    function switchBookingTab(el, tabId) {
+      el.parentElement.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      document.querySelectorAll('[id^="tab-"]').forEach(p => p.style.display = 'none');
+      document.getElementById('tab-' + tabId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

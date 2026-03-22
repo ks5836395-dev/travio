@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rewards & Points — Earn and redeem points on every booking.">
+  <title>Rewards & Points — AITravel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Travio</a>
+    <div class="nav-links" id="navLinks">
+      <a href="planner.html">Trip Planner</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="booking.html">Booking</a>
+      <a href="safety.html">Safety</a>
+      <a href="rewards.html" class="active">Rewards</a>
+      <a href="planner.html" class="btn btn-primary btn-sm">Start Planning</a>
+    </div>
+    <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="layout-dashboard">
+    <aside class="sidebar">
+      <div style="margin-bottom: 24px; padding: 0 16px;">
+        <p class="label" style="margin-bottom: 8px;">Current Trip</p>
+        <h4>Tokyo, Japan</h4>
+        <p style="font-size: 0.8125rem;">Mar 25 – Mar 30, 2026</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link"><span class="icon">📊</span> Overview</a>
+        <a href="planner.html" class="sidebar-link"><span class="icon">🗺️</span> Trip Planner</a>
+        <a href="events.html" class="sidebar-link"><span class="icon">🎫</span> Events</a>
+        <a href="booking.html" class="sidebar-link"><span class="icon">✈️</span> Bookings</a>
+        <a href="budget.html" class="sidebar-link"><span class="icon">💰</span> Budget</a>
+        <a href="safety.html" class="sidebar-link"><span class="icon">🛡️</span> Safety</a>
+        <a href="rewards.html" class="sidebar-link active"><span class="icon">🏆</span> Rewards</a>
+        <a href="summary.html" class="sidebar-link"><span class="icon">📋</span> Summary</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header"><h1>🏆 Rewards & Points</h1><p>Earn, track, and redeem your travel rewards</p></div>
+
+      <!-- Points Balance -->
+      <div class="card" style="margin-bottom: 32px; padding: 40px; text-align: center; background: linear-gradient(135deg, rgba(111,140,255,0.08), rgba(154,124,255,0.08));">
+        <p class="label" style="margin-bottom: 8px;">Your Points Balance</p>
+        <h1 style="font-size: 3.5rem; background: linear-gradient(135deg, var(--secondary-start), var(--secondary-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">2,450</h1>
+        <p style="font-size: 1.0625rem; margin-bottom: 24px;">Points Available</p>
+        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+          <div class="badge" style="padding: 8px 20px; font-size: 0.875rem; background: rgba(245,158,11,0.15); color: #D97706;">🥇 Gold Member</div>
+          <div class="badge" style="padding: 8px 20px; font-size: 0.875rem; background: rgba(52,211,153,0.15); color: #059669;">550 pts to Platinum</div>
+        </div>
+        <div style="max-width: 400px; margin: 24px auto 0;">
+          <div class="flex-between" style="margin-bottom: 6px;"><span class="caption">Progress to Platinum</span><span class="caption" style="font-weight: 600;">82%</span></div>
+          <div class="progress-bar" style="height: 10px;"><div class="progress-fill" style="width: 82%;"></div></div>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="grid-3" style="margin-bottom: 40px;">
+        <div class="card card-compact" style="text-align: center;">
+          <p class="caption">This Month</p>
+          <h3 style="font-size: 1.5rem; margin: 4px 0; color: #059669;">+385</h3>
+          <p style="font-size: 0.8125rem;">Points Earned</p>
+        </div>
+        <div class="card card-compact" style="text-align: center;">
+          <p class="caption">Redeemed</p>
+          <h3 style="font-size: 1.5rem; margin: 4px 0; color: var(--primary);">1,200</h3>
+          <p style="font-size: 0.8125rem;">Total Points</p>
+        </div>
+        <div class="card card-compact" style="text-align: center;">
+          <p class="caption">Lifetime</p>
+          <h3 style="font-size: 1.5rem; margin: 4px 0;">3,650</h3>
+          <p style="font-size: 0.8125rem;">Total Earned</p>
+        </div>
+      </div>
+
+      <!-- Points History -->
+      <h2 style="font-size: 1.375rem; margin-bottom: 20px;">📋 Points History</h2>
+      <div class="card" style="margin-bottom: 40px; padding: 0; overflow: hidden;">
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid var(--border-light);">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 40px; height: 40px; border-radius: var(--radius); background: var(--success-bg); display: flex; align-items: center; justify-content: center; font-size: 1.125rem;">✈️</div>
+              <div><p style="font-weight: 600; color: var(--text); font-size: 0.9375rem;">Flight Booking — ANA</p><p style="font-size: 0.8125rem;">Mar 20, 2026</p></div>
+            </div>
+            <span style="font-weight: 700; color: #059669;">+250</span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid var(--border-light);">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 40px; height: 40px; border-radius: var(--radius); background: var(--success-bg); display: flex; align-items: center; justify-content: center; font-size: 1.125rem;">🏨</div>
+              <div><p style="font-weight: 600; color: var(--text); font-size: 0.9375rem;">Hotel — Shinjuku Grand</p><p style="font-size: 0.8125rem;">Mar 18, 2026</p></div>
+            </div>
+            <span style="font-weight: 700; color: #059669;">+135</span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid var(--border-light);">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 40px; height: 40px; border-radius: var(--radius); background: var(--danger-bg); display: flex; align-items: center; justify-content: center; font-size: 1.125rem;">🎁</div>
+              <div><p style="font-weight: 600; color: var(--text); font-size: 0.9375rem;">Redeemed — Airport Lounge</p><p style="font-size: 0.8125rem;">Mar 15, 2026</p></div>
+            </div>
+            <span style="font-weight: 700; color: var(--danger);">−500</span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px;">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 40px; height: 40px; border-radius: var(--radius); background: var(--success-bg); display: flex; align-items: center; justify-content: center; font-size: 1.125rem;">⭐</div>
+              <div><p style="font-weight: 600; color: var(--text); font-size: 0.9375rem;">Review Bonus</p><p style="font-size: 0.8125rem;">Mar 10, 2026</p></div>
+            </div>
+            <span style="font-weight: 700; color: #059669;">+50</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Redemption -->
+      <h2 style="font-size: 1.375rem; margin-bottom: 20px;">🎁 Redeem Points</h2>
+      <div class="grid-3">
+        <div class="card" style="text-align: center; padding: 32px;">
+          <div style="font-size: 2.5rem; margin-bottom: 12px;">🛋️</div>
+          <h3 style="margin-bottom: 4px; font-size: 1.0625rem;">Airport Lounge</h3>
+          <p style="font-size: 0.8125rem; margin-bottom: 16px;">Access to premium lounges</p>
+          <div class="badge badge-primary" style="margin-bottom: 16px; font-size: 0.875rem;">500 pts</div><br>
+          <button class="btn btn-primary btn-sm">Redeem</button>
+        </div>
+        <div class="card" style="text-align: center; padding: 32px;">
+          <div style="font-size: 2.5rem; margin-bottom: 12px;">🏨</div>
+          <h3 style="margin-bottom: 4px; font-size: 1.0625rem;">Hotel Upgrade</h3>
+          <p style="font-size: 0.8125rem; margin-bottom: 16px;">Room upgrade on next stay</p>
+          <div class="badge badge-primary" style="margin-bottom: 16px; font-size: 0.875rem;">800 pts</div><br>
+          <button class="btn btn-primary btn-sm">Redeem</button>
+        </div>
+        <div class="card" style="text-align: center; padding: 32px;">
+          <div style="font-size: 2.5rem; margin-bottom: 12px;">✈️</div>
+          <h3 style="margin-bottom: 4px; font-size: 1.0625rem;">Flight Discount</h3>
+          <p style="font-size: 0.8125rem; margin-bottom: 16px;">₹2,000 off next flight</p>
+          <div class="badge badge-primary" style="margin-bottom: 16px; font-size: 0.875rem;">1,500 pts</div><br>
+          <button class="btn btn-secondary btn-sm" style="opacity: 0.6; cursor: not-allowed;">Need More</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

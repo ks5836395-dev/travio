@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Trip Summary — Review your complete trip highlights and statistics.">
+  <title>Trip Summary — AITravel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Travio</a>
+    <div class="nav-links" id="navLinks">
+      <a href="planner.html">Trip Planner</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="booking.html">Booking</a>
+      <a href="safety.html">Safety</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="planner.html" class="btn btn-primary btn-sm">Start Planning</a>
+    </div>
+    <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="layout-dashboard">
+    <aside class="sidebar">
+      <div style="margin-bottom: 24px; padding: 0 16px;">
+        <p class="label" style="margin-bottom: 8px;">Current Trip</p>
+        <h4>Tokyo, Japan</h4>
+        <p style="font-size: 0.8125rem;">Mar 25 – Mar 30, 2026</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link"><span class="icon">📊</span> Overview</a>
+        <a href="planner.html" class="sidebar-link"><span class="icon">🗺️</span> Trip Planner</a>
+        <a href="events.html" class="sidebar-link"><span class="icon">🎫</span> Events</a>
+        <a href="booking.html" class="sidebar-link"><span class="icon">✈️</span> Bookings</a>
+        <a href="budget.html" class="sidebar-link"><span class="icon">💰</span> Budget</a>
+        <a href="safety.html" class="sidebar-link"><span class="icon">🛡️</span> Safety</a>
+        <a href="rewards.html" class="sidebar-link"><span class="icon">🏆</span> Rewards</a>
+        <a href="summary.html" class="sidebar-link active"><span class="icon">📋</span> Summary</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header flex-between" style="flex-wrap: wrap; gap: 16px;">
+        <div><h1>📋 Trip Summary</h1><p>Your AI-generated trip recap</p></div>
+        <button class="btn btn-secondary" onclick="alert('Share link copied!')">📤 Share Trip</button>
+      </div>
+
+      <!-- Header Card -->
+      <div class="card" style="margin-bottom: 32px; padding: 0; overflow: hidden;">
+        <div style="height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); display: flex; align-items: center; justify-content: center; position: relative;">
+          <div style="text-align: center; color: #fff; z-index: 1;">
+            <h2 style="color: #fff; font-size: 2rem; margin-bottom: 8px;">🗼 Tokyo, Japan</h2>
+            <p style="color: rgba(255,255,255,0.85); font-size: 1.125rem;">Mar 25 – Mar 30, 2026 • 5 Days</p>
+          </div>
+        </div>
+        <div class="grid-4" style="padding: 32px;">
+          <div style="text-align: center;">
+            <p class="caption">Total Spend</p>
+            <h3 style="font-size: 1.5rem; margin-top: 4px; color: var(--primary);">₹69,500</h3>
+          </div>
+          <div style="text-align: center;">
+            <p class="caption">Places Visited</p>
+            <h3 style="font-size: 1.5rem; margin-top: 4px;">12</h3>
+          </div>
+          <div style="text-align: center;">
+            <p class="caption">Events Attended</p>
+            <h3 style="font-size: 1.5rem; margin-top: 4px;">3</h3>
+          </div>
+          <div style="text-align: center;">
+            <p class="caption">Points Earned</p>
+            <h3 style="font-size: 1.5rem; margin-top: 4px; color: #059669;">+385</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Highlights -->
+      <h2 style="font-size: 1.375rem; margin-bottom: 20px;">✨ Trip Highlights</h2>
+      <div class="grid-3" style="margin-bottom: 40px;">
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="height: 140px; background: linear-gradient(135deg, #ff9a9e, #fecfef);"></div>
+          <div style="padding: 20px;">
+            <h4 style="margin-bottom: 4px;">🌸 Cherry Blossom Festival</h4>
+            <p style="font-size: 0.8125rem;">Ueno Park • Day 3</p>
+            <div class="badge badge-success" style="margin-top: 8px;">Top Moment</div>
+          </div>
+        </div>
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="height: 140px; background: linear-gradient(135deg, #a18cd1, #fbc2eb);"></div>
+          <div style="padding: 20px;">
+            <h4 style="margin-bottom: 4px;">🗼 Tokyo Tower Sunset</h4>
+            <p style="font-size: 0.8125rem;">Minato • Day 1</p>
+            <div class="badge badge-primary" style="margin-top: 8px;">Scenic</div>
+          </div>
+        </div>
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="height: 140px; background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+          <div style="padding: 20px;">
+            <h4 style="margin-bottom: 4px;">🏟️ Tokyo Dome Baseball</h4>
+            <p style="font-size: 0.8125rem;">Bunkyo • Day 2</p>
+            <div class="badge badge-warning" style="margin-top: 8px;">Exciting</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spend Breakdown -->
+      <h2 style="font-size: 1.375rem; margin-bottom: 20px;">💰 Spend Breakdown</h2>
+      <div class="card" style="margin-bottom: 40px; padding: 32px;">
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <div class="flex-between" style="margin-bottom: 6px;"><span style="font-weight: 500;">🏨 Accommodation</span><span style="font-weight: 600;">₹34,000 (49%)</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 49%; background: linear-gradient(90deg, #667eea, #764ba2);"></div></div>
+          </div>
+          <div>
+            <div class="flex-between" style="margin-bottom: 6px;"><span style="font-weight: 500;">🍜 Food & Dining</span><span style="font-weight: 600;">₹15,000 (22%)</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 22%; background: linear-gradient(90deg, #f093fb, #f5576c);"></div></div>
+          </div>
+          <div>
+            <div class="flex-between" style="margin-bottom: 6px;"><span style="font-weight: 500;">🚆 Transport</span><span style="font-weight: 600;">₹12,000 (17%)</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 17%; background: linear-gradient(90deg, #4facfe, #00f2fe);"></div></div>
+          </div>
+          <div>
+            <div class="flex-between" style="margin-bottom: 6px;"><span style="font-weight: 500;">📍 Attractions</span><span style="font-weight: 600;">₹8,500 (12%)</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 12%; background: linear-gradient(90deg, #34D399, #059669);"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating -->
+      <h2 style="font-size: 1.375rem; margin-bottom: 20px;">⭐ Trip Rating</h2>
+      <div class="card" style="margin-bottom: 40px; padding: 40px; text-align: center;">
+        <div style="font-size: 3rem; margin-bottom: 12px;">⭐⭐⭐⭐⭐</div>
+        <h2 style="margin-bottom: 8px;">4.9 / 5.0</h2>
+        <p style="max-width: 400px; margin: 0 auto;">An incredible trip! Great weather, amazing food, and unforgettable cultural experiences.</p>
+        <div style="margin-top: 24px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+          <span class="badge badge-primary" style="padding: 8px 16px;">Great Food</span>
+          <span class="badge badge-success" style="padding: 8px 16px;">Safe</span>
+          <span class="badge badge-warning" style="padding: 8px 16px;">Cultural</span>
+          <span class="badge" style="padding: 8px 16px; background: rgba(154,124,255,0.1); color: #7C3AED;">Scenic</span>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div style="text-align: center; padding-bottom: 40px;">
+        <h3 style="margin-bottom: 16px;">Ready for your next adventure?</h3>
+        <div class="flex-center gap-16" style="flex-wrap: wrap;">
+          <a href="planner.html" class="btn btn-primary btn-lg">Plan Next Trip →</a>
+          <button class="btn btn-secondary btn-lg" onclick="alert('Share link copied!')">📤 Share Summary</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
